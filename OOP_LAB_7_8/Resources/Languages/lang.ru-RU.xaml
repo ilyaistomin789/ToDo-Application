@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:OOP_LAB_7_8"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="m_AddButton">Добавить задачу</v:String>
+    <v:String x:Key="m_EditButton">Редактировать задачу</v:String>
+    <v:String x:Key="m_DeleteButton">Удалить задачу</v:String>
+    <v:String x:Key="m_ResetButton">Сброс</v:String>
+    <v:String x:Key="m_LanguageButton">Язык</v:String>
+    <v:String x:Key="m_RusButton">Русский</v:String>
+    <v:String x:Key="m_EngButton">Английский</v:String>
+    <v:String x:Key="m_AboutButton">О программе</v:String>
+    <v:String x:Key="m_ExitButton">Выход</v:String>
+    <v:String x:Key="m_SearchElement">Поиск</v:String>
+    <v:String x:Key="m_SelectElement">Выбрать</v:String>
+    <v:String x:Key="m_NameElement">Название</v:String>
+    <v:String x:Key="m_CreationDateElement">Дата создания</v:String>
+    <v:String x:Key="m_EndingDateElement">Дата окончания</v:String>
+    <v:String x:Key="m_PriorityElement">Приоритет</v:String>
+    <v:String x:Key="m_CategoryElement">Категория</v:String>
+    <v:String x:Key="m_StatusElement">Статус</v:String>
+    <v:String x:Key="m_DescriptionElement">Описание</v:String>
+    <v:String x:Key="m_CalendarElement">Календарь</v:String>
+    <v:String x:Key="m_SaveButton">Сохранить</v:String>
+    <v:String x:Key="w_EditButton">Изменить</v:String>
+    <v:String x:Key="head_AddElement">Добавить элемент</v:String>
+    <v:String x:Key="head_EditElement">Изменить элемент</v:String>
+    <v:String x:Key="head_SelectElement">Выбрать элемент</v:String>
+    <v:String x:Key="head_SearchElement">Найти элемент</v:String>
+
+</ResourceDictionary>

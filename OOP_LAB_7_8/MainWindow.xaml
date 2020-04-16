@@ -1,0 +1,118 @@
+﻿<Window x:Class="OOP_LAB_7_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_LAB_7_8"
+        mc:Ignorable="d"
+        Title="ToDo Application" 
+        Height="600" Width="1200" 
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        Icon="Resources/Icons/Window/pc.ico" Loaded="Window_Loaded"
+        Cursor="Resources/Cursor/Arrow.cur"
+        Background="Honeydew">
+    <Grid ShowGridLines="false">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="buttonsStackPanel">
+            <TextBlock Text="ToDo List" FontSize="30" FontWeight="Light" FontFamily="Helvetica" HorizontalAlignment="Center" VerticalAlignment="Top" Height="35" Margin="10"/>
+            <Separator/>
+            <StackPanel>
+                <Button x:Name="addButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Click="AddButton_OnClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/1485477083-plus_78571.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_AddButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="editButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Click="EditButton_OnClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/edit-a-document-interface-symbol-of-stroke_icon-icons.com_57848.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_EditButton}" VerticalAlignment="Center" Margin="1" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="deleteButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Click="DeleteButton_OnClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/1485477034-close2_78601.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_DeleteButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="resetButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Click="ResetButton_OnClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/refresh_update_arrows_icon_132935.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_ResetButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="langButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Click="LangButton_OnClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/language_world_icon_132780.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_LanguageButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="rusButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/Russia_29758.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_RusButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="engButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Center" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/United-kingdom_29738.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_EngButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="aboutButton" Height="50" Width="200" Background="Transparent" HorizontalAlignment="Right" Click="AboutButton_OnClick">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                        <Image Source="Resources/Icons/about_3697.ico" Height="25" />
+                        <TextBlock Text="{DynamicResource m_AboutButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="exitButton" Height="50" VerticalAlignment="Bottom" Background="Transparent" Click="ExitButton_OnClick">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0">
+                <Image Source="Resources/Icons/Exit-Page_icon-icons.com_53732.ico" Height="25" />
+                <TextBlock Text="{DynamicResource m_ExitButton}" VerticalAlignment="Center" Margin="10" FontWeight="Light" FontFamily="Helvetica" FontSize="15"/>
+            </StackPanel>
+        </Button>
+        <StackPanel Grid.Column="1">
+            <Menu Height="25" VerticalAlignment="Top" Background="Honeydew">
+                <MenuItem Header="{DynamicResource m_SearchElement}" Height="25">
+                    <MenuItem x:Name="nameMenuItem" Header="{DynamicResource m_NameElement}" Click="NameMenuItem_OnClick"/>
+                    <MenuItem x:Name="endDateMenuItem" Header="{DynamicResource m_EndingDateElement}" Click="EndDateMenuItem_OnClick"/>
+                    <MenuItem x:Name="priorityMenuItem" Header="{DynamicResource m_PriorityElement}" Click="PriorityMenuItem_OnClick"/>
+                    <MenuItem x:Name="categoryMenuItem" Header="{DynamicResource m_CategoryElement}" Click="CategoryMenuItem_OnClick"/>
+                    <MenuItem x:Name="statusMenuItem" Header="{DynamicResource m_StatusElement}" Click="StatusMenuItem_OnClick"/>
+                    <MenuItem x:Name="descriptionMenuItem" Header="{DynamicResource m_DescriptionElement}" Click="DescriptionMenuItem_OnClick"/>
+                </MenuItem>
+                <MenuItem Header="{DynamicResource m_SelectElement}">
+                    <MenuItem x:Name="slct_priorityMenuItem" Header="{DynamicResource m_PriorityElement}" Click="Slct_priorityMenuItem_OnClick"/>
+                    <MenuItem x:Name="slct_categoryMenuItem" Header="{DynamicResource m_CategoryElement}" Click="Slct_categoryMenuItem_OnClick"/>
+                    <MenuItem x:Name="slct_statusMenuItem" Header="{DynamicResource m_StatusElement}" Click="Slct_statusMenuItem_OnClick"/>
+                </MenuItem>
+            </Menu>
+            <DataGrid x:Name="dg_todo" AutoGenerateColumns="False" FontFamily="Helvetica" FontSize="13" 
+                      BorderBrush="Transparent" HeadersVisibility="Column" CanUserResizeColumns="False" 
+                      CanUserResizeRows="False" HorizontalGridLinesBrush="Honeydew" VerticalGridLinesBrush="Honeydew">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path= Name}" Header="{DynamicResource m_NameElement}" IsReadOnly="True" Width="160"/>
+                    <DataGridTextColumn Binding="{Binding Path= CreationDate}" Header="{DynamicResource m_CreationDateElement}" IsReadOnly="True" Width="160"/>
+                    <DataGridTextColumn Binding="{Binding Path= EndingDate}" Header="{DynamicResource m_EndingDateElement}" IsReadOnly="True" Width="140"/>
+                    <DataGridTextColumn Binding="{Binding Path= Priority}" Header="{DynamicResource m_PriorityElement}" IsReadOnly="True" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding Path= Category}" Header="{DynamicResource m_CategoryElement}" IsReadOnly="True" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding Path=Status}" Header="{DynamicResource m_StatusElement}" IsReadOnly="True" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding Path=Description}" Header="{DynamicResource m_DescriptionElement}" IsReadOnly="True" Width="140"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+
+
+    </Grid>
+    
+
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="OOP_LAB_7_8.SearchElement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_LAB_7_8"
+        mc:Ignorable="d"
+        Title="Search Element" Height="600" Width="1010">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.ColumnSpan="2">
+                <TextBlock Text="{DynamicResource head_SearchElement}" FontFamily="Helvetica" FontSize="25" FontWeight="Light" HorizontalAlignment="Center"/>
+                <Separator x:Name="srch_separator" HorizontalAlignment="Center" Width="153" Height="2" BorderBrush="Blue"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <StackPanel x:Name="srchFieldStackPanel" Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                    <TextBlock x:Name="srch_currentTextBlock" Text="{DynamicResource m_NameElement}" FontFamily="Helvetica" FontSize="14"/>
+                    <TextBox x:Name="srch_currentTextBox" Width="150" FontFamily="Helvetica" FontSize="14" Margin="10,0,0,0"/>
+                </StackPanel>
+                <StackPanel x:Name="srch_calendarStackPanel"  HorizontalAlignment="Center" Visibility="Collapsed">
+                    <TextBlock Text="{DynamicResource m_CalendarElement}" FontFamily="Helvetica" FontSize="14" HorizontalAlignment="Center"/>
+                    <Calendar x:Name="srch_Calendar"/>
+                </StackPanel>
+                <Button x:Name="searchButton" Content="{DynamicResource m_SearchElement}" Width="150" Margin="5" Click="SearchButton_OnClick"/>
+                <DataGrid x:Name="srch_dg_todo" AutoGenerateColumns="False" FontFamily="Helvetica" FontSize="13" 
+                          BorderBrush="Transparent" HeadersVisibility="Column" CanUserResizeColumns="False" 
+                          CanUserResizeRows="False" HorizontalGridLinesBrush="Honeydew" VerticalGridLinesBrush="Honeydew">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path= Name}" Header="{DynamicResource m_NameElement}" IsReadOnly="True" Width="160"/>
+                        <DataGridTextColumn Binding="{Binding Path= CreationDate}" Header="{DynamicResource m_CreationDateElement}" IsReadOnly="True" Width="160"/>
+                        <DataGridTextColumn Binding="{Binding Path= EndingDate}" Header="{DynamicResource m_EndingDateElement}" IsReadOnly="True" Width="140"/>
+                        <DataGridTextColumn Binding="{Binding Path= Priority}" Header="{DynamicResource m_PriorityElement}" IsReadOnly="True" Width="130"/>
+                        <DataGridTextColumn Binding="{Binding Path= Category}" Header="{DynamicResource m_CategoryElement}" IsReadOnly="True" Width="130"/>
+                        <DataGridTextColumn Binding="{Binding Path=Status}" Header="{DynamicResource m_StatusElement}" IsReadOnly="True" Width="130"/>
+                        <DataGridTextColumn Binding="{Binding Path=Description}" Header="{DynamicResource m_DescriptionElement}" IsReadOnly="True" Width="140"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

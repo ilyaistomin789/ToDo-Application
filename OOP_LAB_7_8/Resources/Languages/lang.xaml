@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:OOP_LAB_7_8"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="m_AddButton">Add task</v:String>
+    <v:String x:Key="m_EditButton">Edit task</v:String>
+    <v:String x:Key="m_DeleteButton">Delete task</v:String>
+    <v:String x:Key="m_ResetButton">Reset</v:String>
+    <v:String x:Key="m_LanguageButton">Language</v:String>
+    <v:String x:Key="m_RusButton">Russian</v:String>
+    <v:String x:Key="m_EngButton">English</v:String>
+    <v:String x:Key="m_AboutButton">About</v:String>
+    <v:String x:Key="m_ExitButton">Exit</v:String>
+    <v:String x:Key="m_SearchElement">Search</v:String>
+    <v:String x:Key="m_SelectElement">Select</v:String>
+    <v:String x:Key="m_NameElement">Name</v:String>
+    <v:String x:Key="m_CreationDateElement">Creation Date</v:String>
+    <v:String x:Key="m_EndingDateElement">Ending Date</v:String>
+    <v:String x:Key="m_PriorityElement">Priority</v:String>
+    <v:String x:Key="m_CategoryElement">Category</v:String>
+    <v:String x:Key="m_StatusElement">Status</v:String>
+    <v:String x:Key="m_DescriptionElement">Description</v:String>
+    <v:String x:Key="m_CalendarElement">Calendar</v:String>
+    <v:String x:Key="w_EditButton">Edit</v:String>
+    <v:String x:Key="m_SaveButton">Save</v:String>
+    <v:String x:Key="head_AddElement">Add Element</v:String>
+    <v:String x:Key="head_EditElement">Edit Element</v:String>
+    <v:String x:Key="head_SelectElement">Select Element</v:String>
+    <v:String x:Key="head_SearchElement">Search Element</v:String>
+
+    
+</ResourceDictionary>
