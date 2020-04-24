@@ -9,6 +9,7 @@
     <v:String x:Key="m_LanguageButton">Language</v:String>
     <v:String x:Key="m_RusButton">Russian</v:String>
     <v:String x:Key="m_EngButton">English</v:String>
+    <v:String x:Key="m_BelButton">Belarusian</v:String>
     <v:String x:Key="m_AboutButton">About</v:String>
     <v:String x:Key="m_ExitButton">Exit</v:String>
     <v:String x:Key="m_SearchElement">Search</v:String>
@@ -27,6 +28,6 @@
     <v:String x:Key="head_EditElement">Edit Element</v:String>
     <v:String x:Key="head_SelectElement">Select Element</v:String>
     <v:String x:Key="head_SearchElement">Search Element</v:String>
-
+    
     
 </ResourceDictionary>

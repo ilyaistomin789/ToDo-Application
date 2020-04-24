@@ -9,6 +9,7 @@
     <v:String x:Key="m_LanguageButton">Язык</v:String>
     <v:String x:Key="m_RusButton">Русский</v:String>
     <v:String x:Key="m_EngButton">Английский</v:String>
+    <v:String x:Key="m_BelButton">Белорусский</v:String>
     <v:String x:Key="m_AboutButton">О программе</v:String>
     <v:String x:Key="m_ExitButton">Выход</v:String>
     <v:String x:Key="m_SearchElement">Поиск</v:String>

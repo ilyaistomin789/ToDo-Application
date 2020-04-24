@@ -8,6 +8,6 @@ namespace OOP_LAB_7_8.Resources.Languages
 {
     public static class LanguageString
     {
-        public static string[] language = new[] {"en-US", "ru-RU"};
+        public static string[] language = new[] {"en-US", "ru-RU", "en-BY"};
     }
 }

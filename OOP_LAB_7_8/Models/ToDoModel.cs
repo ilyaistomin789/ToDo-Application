@@ -127,5 +127,17 @@ namespace OOP_LAB_7_8.Models
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as ToDoModel;
+            if (obj == null)
+                return false;
+            if (object.ReferenceEquals(this, obj))
+                return true;
+            if (this.GetType() != obj.GetType())
+                return false;
+            return this.Name == other.Name && this.Status == other.Status && this.Description == other.Description;
+        }
     }
 }

@@ -26,15 +26,26 @@ namespace OOP_LAB_7_8
             InitializeComponent();
         }
 
-        public AddElement(string currLang)
+        public AddElement(string currentLanguage)
         {
             InitializeComponent();
-            if (currLang == null || currLang != LanguageString.language[1]) return;
-            nameTextBox.Margin = new Thickness(10, 0, 0, 0);
-            priorityTextBox.Margin = new Thickness(1, 0, 0, 0);
-            categoryTextBox.Margin = new Thickness(6, 0, 0, 0);
-            statusTextBox.Margin = new Thickness(31, 0, 0, 0);
-            descriptionTextBox.Margin = new Thickness(7, 0, 0, 0);
+            if (currentLanguage == LanguageString.language[1])
+            {
+                nameTextBox.Margin = new Thickness(10, 0, 0, 0);
+                priorityTextBox.Margin = new Thickness(1, 0, 0, 0);
+                categoryTextBox.Margin = new Thickness(6, 0, 0, 0);
+                statusTextBox.Margin = new Thickness(31, 0, 0, 0);
+                descriptionTextBox.Margin = new Thickness(7, 0, 0, 0);
+            }
+
+            if (currentLanguage == LanguageString.language[2])
+            {
+                nameTextBox.Margin = new Thickness(34, 0, 0, 0);
+                priorityTextBox.Margin = new Thickness(2, 0, 0, 0);
+                categoryTextBox.Margin = new Thickness(7, 0, 0, 0);
+                statusTextBox.Margin = new Thickness(32, 0, 0, 0);
+                descriptionTextBox.Margin = new Thickness(15, 0, 0, 0);
+            }
         }
 
         private void SaveButton_OnClick(object sender, RoutedEventArgs e)

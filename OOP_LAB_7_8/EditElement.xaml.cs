@@ -11,14 +11,14 @@ namespace OOP_LAB_7_8
     public partial class EditElement : Window
     {
         private int _id;
-        private string _currLang;
+        private string _currentLanguage;
         public EditElement()
         {
             InitializeComponent();
         }
 
 
-        public EditElement(int id, string name, string endingDate, string priority, string category, string status, string description, string currLang)
+        public EditElement(int id, string name, string endingDate, string priority, string category, string status, string description, string currentLanguage)
         {
             InitializeComponent();
             this._id = id;
@@ -29,13 +29,24 @@ namespace OOP_LAB_7_8
             ed_statusTextBox.Text = status;
             ed_descriptionTextBox.Text = description;
             InitializeComponent();
-            if (currLang == null || currLang != LanguageString.language[1]) return;
-            ed_nameTextBox.Margin = new Thickness(10, 0, 0, 0);
-            ed_priorityTextBox.Margin = new Thickness(1, 0, 0, 0);
-            ed_categoryTextBox.Margin = new Thickness(6, 0, 0, 0);
-            ed_statusTextBox.Margin = new Thickness(31, 0, 0, 0);
-            ed_descriptionTextBox.Margin = new Thickness(7, 0, 0, 0);
-            this._currLang = currLang;
+            if (currentLanguage == LanguageString.language[1])
+            {
+                ed_nameTextBox.Margin = new Thickness(10, 0, 0, 0);
+                ed_priorityTextBox.Margin = new Thickness(1, 0, 0, 0);
+                ed_categoryTextBox.Margin = new Thickness(6, 0, 0, 0);
+                ed_statusTextBox.Margin = new Thickness(31, 0, 0, 0);
+                ed_descriptionTextBox.Margin = new Thickness(7, 0, 0, 0);
+            }
+
+            if (currentLanguage == LanguageString.language[2])
+            {
+                ed_nameTextBox.Margin = new Thickness(34, 0, 0, 0);
+                ed_priorityTextBox.Margin = new Thickness(2, 0, 0, 0);
+                ed_categoryTextBox.Margin = new Thickness(7, 0, 0, 0);
+                ed_statusTextBox.Margin = new Thickness(32, 0, 0, 0);
+                ed_descriptionTextBox.Margin = new Thickness(15, 0, 0, 0);
+            }
+            this._currentLanguage = currentLanguage;
         }
 
         private void EditButton_OnClick(object sender, RoutedEventArgs e)
@@ -48,7 +59,7 @@ namespace OOP_LAB_7_8
                 ToDoCollection.toDoModelsList[_id].Category = ed_categoryTextBox.Text;
                 ToDoCollection.toDoModelsList[_id].Status = ed_statusTextBox.Text;
                 ToDoCollection.toDoModelsList[_id].Description = ed_descriptionTextBox.Text;
-                if (MessageBox.Show(_currLang == LanguageString.language[1] ? "Элемент изменен" : "Element changed") == MessageBoxResult.OK)
+                if (MessageBox.Show(_currentLanguage == LanguageString.language[1] ? "Элемент изменен" : "Element changed") == MessageBoxResult.OK)
                 {
                     this.Close();
                 }

@@ -18,7 +18,7 @@
             </StackPanel>
             <StackPanel Grid.Row="1">
                 <StackPanel x:Name="srchFieldStackPanel" Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
-                    <TextBlock x:Name="srch_currentTextBlock" Text="{DynamicResource m_NameElement}" FontFamily="Helvetica" FontSize="14"/>
+                    <TextBlock x:Name="srch_currentTextBlock" Text="{DynamicResource m_NameElement}" Style="{StaticResource FontField}"/>
                     <TextBox x:Name="srch_currentTextBox" Width="150" FontFamily="Helvetica" FontSize="14" Margin="10,0,0,0"/>
                 </StackPanel>
                 <StackPanel x:Name="srch_calendarStackPanel"  HorizontalAlignment="Center" Visibility="Collapsed">

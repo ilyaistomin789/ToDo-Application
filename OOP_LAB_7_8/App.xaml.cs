@@ -21,6 +21,7 @@ namespace OOP_LAB_7_8
             m_Languages.Clear();
             m_Languages.Add(new CultureInfo(LanguageString.language[0]));
             m_Languages.Add(new CultureInfo(LanguageString.language[1]));
+            m_Languages.Add(new CultureInfo(LanguageString.language[2]));
             App.LanguageChanged += App_LanguageChanged;
             
         }
@@ -43,6 +44,9 @@ namespace OOP_LAB_7_8
                 switch (value.Name)
                 {
                     case "ru-RU":
+                        dict.Source = new Uri(String.Format("Resources/Languages/lang.{0}.xaml", value.Name), UriKind.Relative);
+                        break;
+                    case "en-BY":
                         dict.Source = new Uri(String.Format("Resources/Languages/lang.{0}.xaml", value.Name), UriKind.Relative);
                         break;
                     default:

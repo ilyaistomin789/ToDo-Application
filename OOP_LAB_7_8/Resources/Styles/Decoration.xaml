@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="FontField">
+        <Setter Property="ItemsControl.FontSize" Value="14"/>
+        <Setter Property="ItemsControl.FontFamily" Value="Helvetica"/>
+    </Style>
+    <Style x:Key="LanguageComboBox">
+        <Setter Property="ComboBox.Foreground" Value="Gray"/>
+    </Style>
+
+    <ControlTemplate x:Key = "ButtonTemplate" TargetType = "Button">
+        <Grid>
+            <Ellipse x:Name = "ButtonEllipse" Height = "60" Width = "160" >
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint = "0,0.2" EndPoint = "0.2,1.4">
+                        <GradientStop Offset = "0" Color = "#FF3363CB" />
+                        <GradientStop Offset = "1" Color = "#FF763DB0" />
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            </Grid>
+        </ControlTemplate>
+</ResourceDictionary>

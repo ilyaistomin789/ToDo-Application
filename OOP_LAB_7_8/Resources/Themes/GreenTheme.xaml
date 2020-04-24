@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="WindowTheme" TargetType="Window">
+        <Setter Property="Background" Value="#FFA3FB7A"/>
+    </Style>
+    <Style x:Key="ButtonTheme" TargetType="Button">
+        <Setter Property="Background" Value="#FFA3FB7A"/>
+    </Style>
+    <Style x:Key="MenuTheme" TargetType="Menu">
+        <Setter Property="Background" Value="#FFA3FB7A"/>
+    </Style>
+</ResourceDictionary>

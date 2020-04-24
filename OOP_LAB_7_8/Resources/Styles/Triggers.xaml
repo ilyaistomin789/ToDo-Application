@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="ToDoTextBlock">
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Control.IsMouseOver" Value="True"/>
+                    <Condition Property="ButtonBase.IsPressed" Value="False"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="TextBlock.FontSize" Value="20"/>
+                    <Setter Property="TextBlock.Background" Value="DarkOrchid"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="DataGridStatus">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path= Status}" Value="In progress">
+                <Setter Property="DataGridTextColumn.Foreground" Value="#FFCDC412"></Setter>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path= Status}" Value="Done">
+                <Setter Property="DataGridTextColumn.Foreground" Value="LimeGreen"></Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="AboutButtonStyle">
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Height" Duration="0:0:0.3" To="60"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Height" Duration="0:0:0.3" To="50"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
